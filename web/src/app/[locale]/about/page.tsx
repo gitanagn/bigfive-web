@@ -26,40 +26,33 @@ export default function AboutPage({ params: { locale } }: Props) {
   return (
     <>
       <div className='text-center justify-center mt-10'>
-        <h1 className={title()}>About</h1>
+        <h1 className={title()}>Apie</h1>
       </div>
       <div className='mt-2 text-medium lg:mt-4 lg:text-large'>
         <p>
-          Welcome to bigfive-test.com, your premier destination for exploring
-          personality traits using the scientifically acclaimed Big Five model.
-          Our free, open-source test offers detailed insights into the five key
-          dimensions of personality: Openness, Conscientiousness, Extraversion,
-          Agreeableness, and Neuroticism.
+          Sveiki atvykę į psichologija.lt – erdvę, kur galite pažinti save. Šis testas yra parengtas pagal Didžiojo penketo asmenybės teoriją (Paul T. Costa & Robert McCrae) ir
+leidžia įvertinti asmenybės bruožus pagal penkias asmenybės dimensijas: ekstraversiją, neurotizmą,
+sutariamumą, sąmoningumą bei atvirumą patyrimui.
         </p>
         <br />
         <p>
-          Each dimension is carefully analyzed to provide a comprehensive view
-          of your traits and how they influence your behavior and interactions.
+          Kiekviena dimensija kruopščiai analizuojama, siekiant pateikti išsamų Jūsų bruožų vaizdą ir parodyti, kaip jie veikia Jūsų elgesį bei santykius su kitais.
         </p>
         <p>
-          Developed with precision and accessibility in mind, our test helps you
-          understand yourself better and foster personal growth. Embrace the
-          journey of self-discovery with bigfive-test.com, where psychological
-          insights meet user-friendly technology.
+          Mūsų testas sukurtas siekiant tikslumo ir paprastumo – jis padės Jums geriau pažinti save ir augti. Leiskitės į savęs pažinimo kelionę su psichologija.lt – vieta, kur psichologinės įžvalgos dera su patogia ir suprantama technologija.
         </p>
         <br />
         <p>
-          If you have questions please read through the{' '}
+          Jei turite klausimų, pirmiausia perskaitykite{' '}
           <Link href='/faq' className='underline'>
-            FAQ
+            DUK
           </Link>{' '}
-          first. If you can&apos;t find an answer there, feel free to contact us
-          at bigfive-test@rubynor.com.
+          puslapį. Jei vis dar neradote atsakymo, susisiekite su mumis info@psichologija.lt.
         </p>
       </div>
       <section>
         <div className='text-center justify-center mt-20'>
-          <h2 className={title()}>We love feedback!&nbsp;</h2>
+          <h2 className={title()}>Pradžiuginkite mus atsiliepimu!&nbsp;</h2>
           <div className='flex md:inline-flex flex-col md:flex-row items-center'>
             <HeartBoldIcon
               className='text-pink-500 animate-heartbeat'
@@ -70,8 +63,7 @@ export default function AboutPage({ params: { locale } }: Props) {
             />
           </div>
           <div className='mt-2 text-medium lg:mt-4 lg:text-large'>
-            Send us feedback about how our features can be improved or specific
-            issues.
+            Parašykite mums laišką ir mes galėsime pasidžiaugti atliktu darbu arba jį dar patobulinti.
           </div>
         </div>
         <Feedback />
