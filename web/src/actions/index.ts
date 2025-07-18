@@ -35,7 +35,7 @@ export async function getTestResult(
       console.error(`The test results with id ${id} are not found!`);
       throw new B5Error({
         name: 'NotFoundError',
-        message: `The test results with id ${id} is not found in the database!`
+        message: `Neradome testo rezultatų su ${id} savo duomenų bazėje!`
       });
     }
     const selectedLanguage =
@@ -69,7 +69,7 @@ export async function saveTest(testResult: DbResult) {
     console.error(error);
     throw new B5Error({
       name: 'SavingError',
-      message: 'Failed to save test result!'
+      message: 'Nepavyko išsaugoti testo rezultatų!'
     });
   }
 }
@@ -94,12 +94,12 @@ export async function saveFeedback(
     const collection = db.collection('feedback');
     await collection.insertOne({ feedback });
     return {
-      message: 'Sent successfully!',
+      message: 'Išsiųsta sėkmingai!',
       type: 'success'
     };
   } catch (error) {
     return {
-      message: 'Error sending feedback!',
+      message: 'Nepavyko išsiųsti jūsų žinutės!',
       type: 'error'
     };
   }
