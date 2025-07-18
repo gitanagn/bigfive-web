@@ -3,12 +3,16 @@ export interface Language {
   name: string
 }
 
-export type LanguageCode = 'de' | 'da' | 'el' | 'en' | 'es' | 'fr' | 'he' | 'is' | 'it' | 'nl' | 'no' | 'ar' | 'pt-br' | 'id' | 'ro'
+export type LanguageCode = 'de' | 'lt' | 'da' | 'el' | 'en' | 'es' | 'fr' | 'he' | 'is' | 'it' | 'nl' | 'no' | 'ar' | 'pt-br' | 'id' | 'ro'
 
 const languages: Language[] = [
   {
     code: 'de',
     name: 'Deutsch'
+  },
+  {
+    code: 'lt',
+    name: 'Lithuanian'
   },
   {
     code: 'da',
