@@ -39,7 +39,7 @@ export default function Feedback() {
         <div className='w-1/2'>
           <Input
             name='name'
-            label='Name'
+            label='Vardas'
             variant='bordered'
             value={name}
             onValueChange={setName}
@@ -51,11 +51,11 @@ export default function Feedback() {
             value={email}
             name='email'
             type='email'
-            label='Email'
+            label='El.paštas'
             variant='bordered'
             isInvalid={isInvalidEmail}
             color={isInvalidEmail ? 'danger' : undefined}
-            errorMessage={isInvalidEmail && 'Please enter a valid email'}
+            errorMessage={isInvalidEmail && 'Įveskite egzistuojantį paštą.'}
             onValueChange={setEmail}
           />
         </div>
@@ -65,7 +65,7 @@ export default function Feedback() {
           <Textarea
             name='message'
             label='Message'
-            placeholder='Enter your message'
+            placeholder='Jūsų žinutė'
             value={message}
             onValueChange={setMessage}
           />
@@ -78,7 +78,7 @@ export default function Feedback() {
         type='submit'
         isDisabled={isInvalidForm}
       >
-        Submit
+        Siųsti
       </Button>
       {state.message && (
         <div className='mt-4'>
