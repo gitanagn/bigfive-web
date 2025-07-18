@@ -5,6 +5,7 @@ export interface Language {
 
 export type LanguageCode =
   | "en"
+  | "lt"
   | "zh-cn"
   | "zh-hk"
   | "hi"
@@ -38,6 +39,7 @@ export type LanguageCode =
 
 const languages: Language[] = [
   { code: "en", name: "English" },
+  { code: "lt", name: "Lithuanian" },
   { code: "zh-cn", name: "Chinese (PRC)" },
   { code: "zh-hk", name: "Chinese (Hong Kong)" },
   { code: "hi", name: "Hindi" },
