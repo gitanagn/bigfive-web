@@ -48,7 +48,7 @@ export const languages: Language[] = [
     name: 'Chinese',
     countryCode: 'cn',
     map: ['zh-CN', 'zh-Hans', 'zh-Hant']
-  }
+  },
    { code: 'lt', name: 'Lithuanian', countryCode: 'lt' }
 ];
 
