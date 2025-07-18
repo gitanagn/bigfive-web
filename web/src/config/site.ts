@@ -49,6 +49,7 @@ export const languages: Language[] = [
     countryCode: 'cn',
     map: ['zh-CN', 'zh-Hans', 'zh-Hant']
   }
+   { code: 'lt', name: 'Lithuanian', countryCode: 'lt' }
 ];
 
 export const locales = languages.map((lang) => lang.code) as string[];
