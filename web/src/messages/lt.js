@@ -19,21 +19,21 @@ const lithuanian = {
     // do not translate <green>, {n}, and </green> tags
     tests_taken: 'Virš <green>{n}</green> žmonių atliko testą',
     compare: {
-      title: 'Palyginti save su kitais',
+      title: 'Palyginkite save su kitais',
       text1:
         'Palyginkite save su partneriu, kolega ar draugais.',
       text2: 'Sužinokite, kuo skiriatės nuo kitų žmonių penkiose asmenybės srityse:',
       action: 'Pamatyti gyvai'
     },
-    share: 'Pasidalykite su draugais ir sužinokite, kiek esate suderinami',
+    share: 'Pasidalykite su partneriu ir sužinokite, kiek esate suderinami',
     cards: {
       open: {
-        title: 'Tikrumas',
-        text: 'Rezultatai yra nekintantys. Atskleiskite savo savybes.'
+        title: 'Pritaikomumas',
+        text: 'Testo rezultatai atskleidžia, kaip pagerinti savo būseną.'
       },
       free: {
         title: 'Nemokama',
-        text: 'Testas yra nemokamas. Atsakykite į klausimas ir pažinkite save.'
+        text: 'Testas yra nemokamas. Atsakykite į klausimus ir pažinkite save.'
       },
       scientific: {
         title: 'Grįsta mokslu',
@@ -45,7 +45,7 @@ const lithuanian = {
       }
     },
     description: {
-      top: 'Pažink save geriau, atlikęs <violet>mokslu grįstą</violet> psichologijos testą.',
+      top: 'Pažinkite save geriau, atlikę <violet>mokslu grįstą</violet> asmenybės bruožų testą.',
       subtop: 'Tai',
       subtop2:
         ' pasaulyje labiausiai pripažintas psichologinis testas, kurio veiksmingumas įrodytas mokslu.',
@@ -78,19 +78,19 @@ inventoriumi iš <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   facets: {
     openness_to_experience: {
-      title: 'Atvirumas patirčiai'
+      title: 'Atvirumas patyrimui'
     },
     conscientiousness: {
       title: 'Sąmoningumas'
     },
     extraversion: {
-      title: 'Ekstravertiškumas'
+      title: 'Ekstraversija'
     },
     agreeableness: {
-      title: 'Sutarumas'
+      title: 'Sutariamumas'
     },
     neuroticism: {
-      title: 'Neurotiškumas'
+      title: 'Neurotizmas'
     }
   },
   common: {
@@ -137,11 +137,11 @@ inventoriumi iš <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     }
   },
   openness_to_experience: {
-    title: 'Atvirumas patirčiai',
+    title: 'Atvirumas patyrimui',
     seo: {
-      title: 'Apžvalga apie bruožą - atvirumas patirčiai.',
+      title: 'Apžvalga apie bruožą - atvirumas patyrimui.',
       description:
-        'Skaityti išsamiau apie atvirumo patirčiai bruožą'
+        'Skaityti išsamiau apie atvirumo patyrimui bruožą'
     }
   },
   conscientiousness: {
@@ -155,21 +155,21 @@ inventoriumi iš <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   extraversion: {
     title: 'Ektravertiškumas',
     seo: {
-      title: 'Apžvalga apie bruožą - ekstravertiškumas',
-      description: 'Skaityti išsamiau apie ekstravertiškumo bruožą'
+      title: 'Apžvalga apie bruožą - ekstraversija',
+      description: 'Skaityti išsamiau apie ekstraversijos bruožą'
     }
   },
   agreeableness: {
-    title: 'Sutarumas',
+    title: 'Sutariamumas',
     seo: {
-      title: 'Apžvalga apie bruožą - sutarumas',
-      description: 'Skaityti išsamiau apie sutarumo bruožą'
+      title: 'Apžvalga apie bruožą - sutariamumas',
+      description: 'Skaityti išsamiau apie sutariamumo bruožą'
     }
   },
   neuroticism: {
-    title: 'Neurotiškumas',
+    title: 'Neurotizmas',
     seo: {
-      title: 'Apžvalga apie bruožą - neurotiškumas',
+      title: 'Apžvalga apie bruožą - neurotizmas',
       description: 'Skaityti išsamiau apie neurotiškumo bruožą'
     }
   },
@@ -182,7 +182,7 @@ inventoriumi iš <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     needToAddPeople: 'Turite pridėti žmonių, kad galėtumėte juos palyginti',
     addAnother: 'Pridėti kitą žmogų',
     addPerson: 'Pridėti žmogų',
-    comparePeople: 'Palyginti žmones',
+    comparePeople: 'Palyginti',
     nameOfPerson: 'Žmogaus vardas',
     urlOrId: 'URL arba ID palyginimui',
     name: 'Vardas'
@@ -197,14 +197,14 @@ inventoriumi iš <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seo: {
       title: 'Mano Didžiojo penketo asmenybės bruožų testas',
       description:
-        'Peržiūrėkite mano asmenybės bruožus ir palyginkite save šiose penkiose srityse: neurotiškumas, atvirumas patirčiai, sąmoningumas, ekstraversija, sutariamumas.'
+        'Peržiūrėkite mano asmenybės bruožus ir palyginkite save šiose penkiose srityse: neurotizmas, atvirumas patyrimui, sąmoningumas, ekstraversija, sutariamumas.'
     }
   },
   getResult: {
     result: 'Rezultatai',
     explanation:
-      'Jei jau atlikote testą ir išsaugojote savo ID, rezultatus galite peržiūrėti įvesdami gautą ID, t. y. ',
-    idInput: 'į ID įvedimo laukelį',
+      'Jei jau atlikote testą ir išsaugojote savo ID, rezultatus galite peržiūrėti įvesdami gautą kodą ',
+    idInput: 'į laukelį',
     urlOrId: 'jūsų rezultatų URL arba ID',
     getResult: 'Peržiūrėti rezultatus',
     viewPrevious: 'Žiūrėti ankstesnius rezultatus'
