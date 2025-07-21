@@ -1,7 +1,7 @@
 const choices = {
   plus: [
     {
-      text: 'Dezacord total',
+      text: 'Dezacord total 222',
       score: 1,
       color: 1
     },
