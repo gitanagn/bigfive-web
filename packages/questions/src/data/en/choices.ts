@@ -1,54 +1,54 @@
 const choices = {
   plus: [
     {
-      text: 'Very Inaccurate',
+      text: 'Visiškai nesutinku',
       score: 1,
       color: 1
     },
     {
-      text: 'Moderately Inaccurate',
+      text: 'Nesutinku',
       score: 2,
       color: 2
     },
     {
-      text: 'Neither Accurate Nor Inaccurate',
+      text: 'Nei sutinku, nei nesutinku',
       score: 3,
       color: 3
     },
     {
-      text: 'Moderately Accurate',
+      text: 'Sutinku',
       score: 4,
       color: 4
     },
     {
-      text: 'Very Accurate',
+      text: 'Visiškai sutinku',
       score: 5,
       color: 5
     }
   ],
   minus: [
     {
-      text: 'Very Inaccurate',
+      text: 'Visiškai nesutinku',
       score: 5,
       color: 1
     },
     {
-      text: 'Moderately Inaccurate',
+      text: 'Nesutinku',
       score: 4,
       color: 2
     },
     {
-      text: 'Neither Accurate Nor Inaccurate',
+      text: 'Nei sutinku, nei nesutinku',
       score: 3,
       color: 3
     },
     {
-      text: 'Moderately Accurate',
+      text: 'Sutinku',
       score: 2,
       color: 4
     },
     {
-      text: 'Very Accurate',
+      text: 'Visiškai sutinku',
       score: 1,
       color: 5
     }
