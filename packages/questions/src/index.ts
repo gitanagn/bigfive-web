@@ -1,8 +1,9 @@
 import languages, { Language, LanguageCode } from './data/languages';
 import path from 'path';
-// Hack — statiniai importai, kad Vercel įtrauktų kalbas į build
-import './data/lt/questions';
-import './data/lt/choices';
+if (process.env.NODE_ENV === 'production') {
+  await import('./data/lt/questions')
+  await import('./data/lt/choices')
+}
 
 export async function getItems(languageCode: LanguageCode = 'en'): Promise<Question[]> {
   try {
