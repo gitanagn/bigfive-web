@@ -1,7 +1,7 @@
 module.exports = {
   plus: [
     {
-      text: 'Dezacord total',
+      text: 'Dezacord total 111',
       score: 1,
       color: 1
     },
