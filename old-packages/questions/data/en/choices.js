@@ -1,7 +1,7 @@
 module.exports = {
   plus: [
     {
-      text: 'Very Inaccurate',
+      text: 'Visiškai nesutinku',
       score: 1,
       color: 1
     },
