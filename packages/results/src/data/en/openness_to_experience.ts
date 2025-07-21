@@ -2,119 +2,66 @@ import { type TemplateDomain } from '../../types'
 
 const openness: TemplateDomain = {
   domain: 'O',
-  title: 'Openness To Experience',
-  shortDescription: 'Openness to Experience describes a dimension of cognitive style that distinguishes imaginative, creative people from down-to-earth, conventional people.',
-  description: `Open people are intellectually curious,
-appreciative of art, and sensitive to beauty. They tend to be,
-compared to closed people, more aware of their feelings. They tend to
-think and act in individualistic and nonconforming
-ways. Intellectuals typically score high on Openness to Experience;
-consequently, this factor has also been called Culture or
-Intellect. <br /><br />Nonetheless, Intellect is probably best regarded as one aspect of openness
-to experience. Scores on Openness to Experience are only modestly
-related to years of education and scores on standard intelligent tests.
+  title: 'Atvirumas patyrimui',
+  shortDescription: 'Atvirumas patyrimui apibūdina kognityvinio stiliaus aspektą, kuris skiria vaizduotės kupinus, kūrybingus žmones nuo paprastų, įprastų žmonių.',
+  description: `Atviri patyrimui žmonės yra intelektualiai smalsūs, vertina meną ir yra jautrūs grožiui. Jie, palyginti su uždarais žmonėmis, linkę labiau suvokti savo jausmus. Jie linkę mąstyti ir elgtis individualistiškai ir nekonformiškai. Intelektualai paprastai pasiekia aukštus balus pagal atvirumą patirčiai; todėl šis veiksnys dar vadinamas kultūra arba intelektu. <br /><br />Nepaisant to, intelektą tikriausiai geriausia laikyti vienu iš atvirumo patyrimui aspektų. Atvirumo patyrimui balai tik šiek tiek susiję su išsilavinimu ir standartinių intelekto testų rezultatais.
 <br /><br />
-Another characteristic of the open cognitive style is a facility for thinking
-in symbols and abstractions far removed from concrete experience. Depending on
-the individual's specific intellectual abilities, this symbolic cognition may
-take the form of mathematical, logical, or geometric thinking, artistic and
-metaphorical use of language, music composition or performance, or one of the
-many visual or performing arts.
+Kitas atvirojo kognityvinio stiliaus bruožas yra gebėjimas mąstyti simboliais ir abstrakcijomis, kurios yra toli nuo konkrečios patirties. Priklausomai nuo individualių intelektinių gebėjimų, šis simbolinis pažinimas gali
+įgauti matematinio, loginio ar geometrinio mąstymo, meninio ir
+metaforinio kalbos vartojimo, muzikos kūrimo ar atlikimo, arba vieno iš
+daugelio vaizduojamojo ar scenos menų formą.
 <br /><br />
-People with low scores on openness to experience tend to have narrow, common
-interests. They prefer the plain, straightforward, and obvious over the
-complex, ambiguous, and subtle. They may regard the arts and sciences with
-suspicion, regarding these endeavors as abstruse or of no practical use.
-Closed people prefer familiarity over novelty; they are conservative and
-resistant to change.
+Žmonės, kurių atvirumo patirčiai balai yra žemi, paprastai turi siaurus, bendrus interesus. Jie renkasi tai, kas paprasta, tiesmukiška ir akivaizdu, o ne tai, kas sudėtinga, dviprasmiška ir subtilu. Jie gali įtarti meną ir mokslą, laikydami šiuos siekius paviršutiniškais arba neturinčiais jokios praktinės naudos. Uždari žmonės renkasi pažįstamumą, o ne naujumą; jie yra konservatyvūs ir priešinasi pokyčiams.
 <br /><br />
-Openness is often presented as healthier or more mature by psychologists, who
-are often themselves open to experience. However, open and closed styles of
-thinking are useful in different environments. The intellectual style of the
-open person may serve a professor well, but research has shown that closed
-thinking is related to superior job performance in police work, sales, and
-a number of service occupations.`,
+Psichologai, kurie patys dažnai yra atviri patyrimui, atvirumą dažnai pateikia kaip sveikesnį ar brandesnį. Tačiau atviras ir uždaras mąstymo stiliai yra naudingi skirtingose aplinkose. Atviro žmogaus intelektualinis stilius gali būti naudingas profesoriui, tačiau tyrimai parodė, kad uždaras mąstymas yra susijęs su geresniais darbo rezultatais policijos darbe, pardavimuose ir daugelyje kitų aptarnavimo sričių.`,
   results: [
     {
       score: 'low', // do not translate this line
-      text: `Your score on Openness to Experience is low, indicating you like to think in
-plain and simple terms. Others describe you as down-to-earth, practical,
-and conservative.`
+      text: `Jūsų atvirumo patyrimui balas yra žemas, o tai rodo, kad jums patinka mąstyti paprastai ir aiškiai. Kiti jus apibūdina kaip paprastą, praktišką ir konservatyvų.`
     },
     {
       score: 'neutral', // do not translate this line
-      text: `Your score on Openness to Experience is average, indicating you enjoy
-tradition but are willing to try new things. Your thinking is neither
-simple nor complex. To others you appear to be a well-educated person
-but not an intellectual.`
+      text: `Jūsų atvirumo patyrimui balas yra vidutinis, tai rodo, kad jums patinka tradicijos, bet esate pasirengęs išbandyti naujus dalykus. Jūsų mąstymas nėra nei paprastas, nei sudėtingas. Kitiems atrodote išsilavinęs žmogus, bet ne intelektualas.`
     },
     {
       score: 'high', // do not translate this line
-      text: `Your score on Openness to Experience is high, indicating you enjoy novelty,
-variety, and change. You are curious, imaginative, and creative.`
+      text: `Jūsų atvirumo patyrimui balas yra aukštas, o tai rodo, kad jums patinka naujumas, įvairovė ir pokyčiai. Esate smalsus, išradingas ir kūrybingas.`
     }
   ],
   facets: [
     {
       facet: 1,
-      title: 'Imagination',
-      text: `To imaginative individuals, the real world is
-often too plain and ordinary. High scorers on this scale use fantasy as a
-way of creating a richer, more interesting world. Low scorers are on this
-scale are more oriented to facts than fantasy.`
+      title: 'Vaizduotė',
+      text: `Lavinančios vaizduotės žmonėms realus pasaulis dažnai yra pernelyg paprastas ir įprastas. Aukštus šios skalės rezultatus turintys asmenys naudoja fantaziją kaip būdą susikurti turtingesnį ir įdomesnį pasaulį. Žemus šios skalės rezultatus turintys asmenys labiau orientuojasi į faktus nei į fantaziją.`
     },
     {
       facet: 2,
-      title: 'Artistic Interests',
-      text: `High scorers on this scale love beauty, both in
-art and in nature. They become easily involved and absorbed in artistic
-and natural events. They are not necessarily artistically trained nor
-talented, although many will be. The defining features of this scale are
-interest in, and appreciation of natural and
-artificial beauty. Low scorers lack aesthetic sensitivity and interest in
-the arts.`
+      title: 'Meniniai interesai',
+      text: `Aukštus šios skalės balus surinkę asmenys mėgsta grožį tiek mene, tiek gamtoje. Jie lengvai įsitraukia ir pasineria į meno ir gamtos įvykius. Jie nebūtinai yra meniškai išlavinti ar talentingi, nors daugelis tokių bus. Šios skalės išskirtiniai bruožai yra susidomėjimas gamtos ir dirbtinio grožio vertinimu. Žemus balus surinkusiems asmenims trūksta estetinio jautrumo ir susidomėjimo menu.`
     },
     {
       facet: 3,
-      title: 'Emotionality',
-      text: `Persons high on Emotionality have good access
-to and awareness of their own feelings. Low scorers are less aware of
-their feelings and tend not to express their emotions openly.`
+      title: 'Emocionalumas',
+      text: `Asmenys, kurių emocingumas yra aukštas, gerai supranta ir suvokia savo jausmus. Žemą balą turintys asmenys mažiau suvokia savo jausmus ir yra linkę atvirai jų neišreikšti.`
     },
     {
       facet: 4,
-      title: 'Adventurousness',
-      text: `High scorers on adventurousness are eager to
-try new activities, travel to foreign lands, and experience different
-things. They find familiarity and routine boring, and will take a new
-route home just because it is different. Low scorers tend to feel
-uncomfortable with change and prefer familiar routines.`
+      title: 'Nuotykių ieškojimas',
+      text: `Aukštus balus turintys nuotykių ieškotojai noriai
+išbando naujas veiklas, keliauja į svečias šalis ir patiria skirtingus
+dalykus. Jiems pažįstama ir rutina atrodo nuobodi, todėl jie renkasi naują
+maršrutą namo vien todėl, kad jis kitoks. Žemus balus turintys žmonės linkę jaustis
+nejaukiai dėl pokyčių ir renkasi pažįstamą rutiną.`
     },
     {
       facet: 5,
-      title: 'Intellect',
-      text: `Intellect and artistic interests are the two most
-important, central aspects of openness to experience. High scorers on
-Intellect love to play with ideas. They are open-minded to new and unusual
-ideas, and like to debate intellectual issues. They enjoy riddles, puzzles,
-and brain teasers. Low scorers on Intellect prefer dealing with either
-people or things rather than ideas. They regard intellectual exercises as a
-waste of time. Intellect should not be equated with intelligence.
-Intellect is an intellectual style, not an intellectual ability, although
-high scorers on Intellect score slightly higher than low-Intellect
-individuals on standardized intelligence tests.`
+      title: 'Intelektas',
+      text: `Intelektas ir meniniai interesai yra du svarbiausi, pagrindiniai atvirumo patyrimui aspektai. Aukštus intelekto balus turintys asmenys mėgsta žaisti su idėjomis. Jie yra atviri naujoms ir neįprastoms idėjoms ir mėgsta diskutuoti intelektualiniais klausimais. Jiems patinka mįslės, galvosūkiai. Žemus intelekto balus turintys asmenys mieliau bendrauja su žmonėmis arba daiktais, o ne su idėjomis. Jie intelektualinius pratimus laiko laiko švaistymu. Intelekto nereikėtų tapatinti su intelektualiniu išsilavinimu. Intelektas yra intelekto stilius, o ne intelektualinis gebėjimas, nors aukštą intelekto balą turintys asmenys standartizuotuose intelekto testuose gauna šiek tiek aukštesnius balus nei asmenys, turintys žemą intelektą.`
     },
     {
       facet: 6,
-      title: 'Liberalism',
-      text: `Psychological liberalism refers to a readiness to
-challenge authority, convention, and traditional values. In its most
-extreme form, psychological liberalism can even represent outright
-hostility toward rules, sympathy for law-breakers, and love of ambiguity,
-chaos, and disorder. Psychological conservatives prefer the security and
-stability brought by conformity to tradition. Psychological liberalism
-and conservatism are not identical to political affiliation, but certainly
-incline individuals toward certain political parties.`
+      title: 'Liberalizmas',
+      text: `Psichologinis liberalizmas reiškia pasirengimą mesti iššūkį autoritetui, konvencijoms ir tradicinėms vertybėms. Pačia kraštutiniausia forma psichologinis liberalizmas gali reikšti net atvirą priešiškumą taisyklėms, užuojautą įstatymų laužytojams ir meilę dviprasmybei, chaosui ir netvarkai. Psichologiniai konservatoriai teikia pirmenybę saugumui ir stabilumui, kurį suteikia atitikimas tradicijoms. Psichologinis liberalizmas ir konservatizmas nėra tapatūs politinei priklausomybei, tačiau neabejotinai skatina asmenis linkti tam tikrų politinių partijų.`
     }
   ]
 }
