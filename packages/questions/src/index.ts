@@ -1,9 +1,5 @@
 import languages, { Language, LanguageCode } from './data/languages';
 import path from 'path';
-if (process.env.NODE_ENV === 'production') {
-  await import('./data/lt/questions')
-  await import('./data/lt/choices')
-}
 
 export async function getItems(languageCode: LanguageCode = 'en'): Promise<Question[]> {
   try {
