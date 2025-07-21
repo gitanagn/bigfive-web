@@ -2,99 +2,59 @@ import { type TemplateDomain } from '../../types'
 
 const extraversion: TemplateDomain = {
   domain: 'E',
-  title: 'Extraversion',
-  shortDescription: 'Extraversion is marked by pronounced engagement with the external world.',
-  description: `Extraverts enjoy being with people, are full of energy, and
-often experience positive emotions. They tend to be enthusiastic,
-action-oriented, individuals who are likely to say "Yes!" or "Let's
-go!" to opportunities for excitement. In groups they like to talk,
-assert themselves, and draw attention to themselves.
+  title: 'Ekstraversija',
+  shortDescription: 'Ekstraversija pasižymi ryškiu įsitraukimu su išoriniu pasauliu.',
+  description: `Ekstravertai mėgsta būti su žmonėmis, yra kupini energijos ir dažnai patiria teigiamas emocijas. Jie linkę būti entuziastingi, orientuoti į veiksmą, linkę pasakyti „Taip!“ arba „Pirmyn!“ pasitaikius progoms, kurios sukelia jaudulį. Grupėse jie mėgsta kalbėtis,
+reikšti save ir atkreipti į save dėmesį.
 <br /><br />
-Introverts lack the exuberance, energy, and activity levels of
-extraverts. They tend to be quiet, low-key, deliberate, and
-disengaged from the social world. Their lack of social involvement
-should not be interpreted as shyness or depression; the
-introvert simply needs less stimulation than an extravert and prefers
-to be alone. <br /><br />The independence and reserve of the introvert is
-sometimes mistaken as unfriendliness or arrogance. In reality, an
-introvert who scores high on the agreeableness dimension will not
-seek others out but will be quite pleasant when approached.`,
+Intravertams trūksta ekstravertams būdingo entuziazmo, energijos ir aktyvumo. Jie linkę būti tylūs, santūrūs, apgalvoti ir atsiriboję nuo socialinio pasaulio. Jų socialinio įsitraukimo stoka neturėtų būti interpretuojama kaip drovumas ar depresija; intravertui tiesiog reikia mažiau stimuliacijos nei ekstravertui ir jis renkasi būti vienas. <br /><br />Intraverto nepriklausomybė ir santūrumas kartais klaidingai suprantami kaip nedraugiškumas ar arogancija. Iš tikrųjų intravertas, surinkęs aukštą balą pagal malonumo matmenį, neieškos kitų, bet bus gana malonus, kai prie jo prieis.`,
   results: [
     {
       score: 'low', // do not translate this line
-      text: `Your score on Extraversion is low, indicating you are
-introverted, reserved, and quiet. You enjoy solitude and solitary
-activities. Your socialization tends to be restricted to a few close friends.`
+      text: `Jūsų ekstraversijos balas yra žemas, o tai rodo, kad esate intravertas, uždaras ir tylus. Mėgstate vienatvę ir savarankišką veiklą. Jūsų bendravimas paprastai apsiriboja keliais artimais draugais.`
     },
     {
       score: 'neutral', // do not translate this line
-      text: `Your score on Extraversion is average, indicating you are
-neither a subdued loner nor a jovial chatterbox. You enjoy time with
-others but also time alone.`
+      text: `Jūsų ekstraversijos balas yra vidutinis, o tai rodo, kad nesate nei santūrus vienišius, nei linksmas plepys. Mėgstate laiką su kitais, bet ir vienumoje.`
     },
     {
       score: 'high', // do not translate this line
-      text: `Your score on Extraversion is high, indicating you are
-sociable, outgoing, energetic, and lively. You prefer to be around
-people much of the time.`
+      text: `Jūsų ekstraversijos balas yra aukštas, o tai rodo, kad esate bendraujantis, atviras, energingas ir gyvybingas. Jums labiau patinka būti tarp žmonių.`
     }
   ],
   facets: [
     {
       facet: 1,
-      title: 'Friendliness',
-      text: `Friendly people genuinely like other people
-and openly demonstrate positive feelings toward others. They make
-friends quickly and it is easy for them to form close, intimate
-relationships. Low scorers on Friendliness are not necessarily cold
-and hostile, but they do not reach out to others and are perceived
-as distant and reserved.`
+      title: 'Draugiškumas',
+      text: `Draugiški žmonės nuoširdžiai mėgsta kitus žmones ir atvirai rodo teigiamus jausmus kitų atžvilgiu. Jie greitai susiranda draugų ir lengvai užmezga artimus, intymius santykius. Žemą draugiškumo balą turintys žmonės nebūtinai yra šalti ir priešiški, tačiau jie nesiekia bendrauti su kitais ir yra suvokiami kaip atitrūkę ir uždari.`
     },
     {
       facet: 2,
-      title: 'Gregariousness',
-      text: `Gregarious people find the company of
-others pleasantly stimulating and rewarding. They enjoy the
-excitement of crowds. Low scorers tend to feel overwhelmed by, and
-therefore actively avoid, large crowds. They do not necessarily
-dislike being with people sometimes, but their need for privacy and
-time to themselves is much greater than for individuals who score
-high on this scale.`
+      title: 'Bendruomeniškumas',
+      text: `Bendraujantys žmonės kitų draugiją laiko maloniai stimuliuojančia ir naudinga. Jiems patinka minios jaudulys. Žemą balą surinkę žmonės linkę jaustis priblokšti didelių minių ir todėl aktyviai jų vengia. Jie nebūtinai kartais nemėgsta būti su žmonėmis, tačiau jų poreikis privatumui ir laikui sau yra daug didesnis nei asmenų, kurie šioje skalėje gauna aukštą balą..`
     },
     {
       facet: 3,
-      title: 'Assertiveness',
-      text: `High scorers Assertiveness like to speak
- out, take charge, and direct the activities of others. They tend to
- be leaders in groups. Low scorers tend not to talk much and let
- others control the activities of groups.`
+      title: 'Asertyvumas',
+      text: `Aukštus balus surinkę asmenys yra atkaklūs, mėgsta kalbėti atvirai, imtis iniciatyvos ir vadovauti kitų veiklai. Jie linkę būti lyderiais grupėse. Žemus balus surinkę asmenys linkę daug nekalbėti ir leisti kitiems kontroliuoti grupių veiklą.`
     },
     {
       facet: 4,
-      title: 'Activity Level',
-      text: `Active individuals lead fast-paced, busy
- lives. They move about quickly, energetically, and vigorously, and
- they are involved in many activities. People who score low on this
- scale follow a slower and more leisurely, relaxed pace.`
+      title: 'Aktyvumo lygis',
+      text: `Aktyvūs asmenys gyvena greitą, užimtą gyvenimą.
+Jie juda greitai, energingai ir energingai, ir yra įsitraukę į daugybę veiklų. Žmonės, kurie šioje skalėje surinko žemą balą, gyvena lėtesnį ir ramesnį, atsipalaidavusį tempą.`
     },
     {
       facet: 5,
-      title: 'Excitement-Seeking',
-      text: `High scorers on this scale are easily
-bored without high levels of stimulation. They love bright lights
-and hustle and bustle. They are likely to take risks and seek
-thrills. Low scorers are overwhelmed by noise and commotion and are
-adverse to thrill-seeking.`
+      title: 'Jaudulio ieškojimas',
+      text: `Aukštą balą šioje skalėje turintys asmenys lengvai nuobodžiauja be didelio stimuliavimo lygio. Jie mėgsta ryškias šviesas
+ir šurmulį. Jie linkę rizikuoti ir ieškoti jaudinančių pojūčių. Žemą balą turintys asmenys yra varginami triukšmo ir šurmulio, todėl
+nepageidauja tokių situacijų.`
     },
     {
       facet: 6,
-      title: 'Cheerfulness',
-      text: `This scale measures positive mood and
-feelings, not negative emotions (which are a part of the
-Neuroticism domain). Persons who score high on this scale typically
-experience a range of positive feelings, including happiness,
-enthusiasm, optimism, and joy. Low scorers are not as prone to such
-energetic, high spirits.`
+      title: 'Linksmumas',
+      text: `Ši skalė matuoja teigiamą nuotaiką ir jausmus, o ne neigiamas emocijas (kurios priklauso neurotiškumo sričiai). Asmenys, kurie šioje skalėje surenka aukštą balą, paprastai patiria įvairius teigiamus jausmus, įskaitant laimę, entuziazmą, optimizmą ir džiaugsmą. Žemą balą surinkę asmenys nėra tokie linkę į tokią energingą, pakilią nuotaiką.`
     }
   ]
 }
