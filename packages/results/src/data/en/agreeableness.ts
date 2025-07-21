@@ -2,105 +2,55 @@ import { type TemplateDomain } from '../../types'
 
 const agreeableness: TemplateDomain = {
   domain: 'A',
-  title: 'Agreeableness',
-  shortDescription: 'Agreeableness reflects individual differences in concern with cooperation and social harmony. Agreeable individuals value getting along with others.',
-  description: `They are therefore considerate, friendly,
-generous, helpful, and willing to compromise their interests with
-others'. Agreeable people also have an optimistic view of human
-nature. They believe people are basically honest, decent, and
-trustworthy. <br /><br />
-Disagreeable individuals place self-interest above getting along with
-others.  They are generally unconcerned with others' well-being, and
-therefore are unlikely to extend themselves for other people.
-Sometimes their skepticism about others' motives causes them to be
-suspicious, unfriendly, and uncooperative.
-<br /><br />
-Agreeableness is obviously advantageous for attaining and maintaining
-popularity. Agreeable people are better liked than disagreeable
-people. On the other hand, agreeableness is not useful in situations
-that require tough or absolute objective decisions. Disagreeable
-people can make excellent scientists, critics, or soldiers.`,
+  title: 'Sutariamumas',
+  shortDescription: 'Sutariamumas atskleidžia asmenybės skirtumus rūpinantis bendradarbiavimu ir socialine harmonija. Sutariamumu pasižymintys asmenys vertina gerus santykius su kitais.',
+description: `Todėl jie yra atidūs, draugiški, dosnūs, paslaugūs ir linkę derėtis, derindami savo interesus prie kitų. Sutariamumu pasižymintys žmonės taip pat turi optimistinį požiūrį į žmogaus prigimtį. Jie tiki, kad žmonės iš esmės yra sąžiningi, dorovingi ir patikimi.<br /><br />
+Žemu sutariamumu pasižymintys asmenys savo interesus laiko svarbesniais už gerus santykius su kitais. Jie dažniausiai nesirūpina kitų gerove ir todėl vargu ar stengiasi padėti kitiems. Kartais jų skepticizmas dėl kitų žmonių motyvų verčia juos būti įtariais ir nedraugiškais.<br /><br />
+Sutariamumas akivaizdžiai padeda įgyti ir išlaikyti populiarumą. Sutariamumu pasižymintys žmonės yra labiau mėgstami nei turintys žemą sutariamumą. Kita vertus, sutariamumas nėra naudingas situacijose, kur reikalingi griežti ar absoliučiai objektyvūs sprendimai. Žemu sutariamumu pasižymintys žmonės gali būti puikūs mokslininkai, kritikai ar kariai.`,
   results: [
     {
       score: 'low', // do not translate this line
-      text: `Your score on Agreeableness is low, indicating less concern
-with others' needs than with your own. People see you as tough,
-critical, and uncompromising.`
+      text: `Jūsų sutariamumas (angl., Agreeableness) yra žemas, o tai rodo, kad labiau rūpinatės savo poreikiais nei kitų. Kiti žmonės gali jus laikyti griežtu, kritišku ir nelengvai nusileidžiančiu asmeniu.`
     },
     {
       score: 'neutral', // do not translate this line
-      text: `Your level of Agreeableness is average, indicating some concern
-with others' Needs, but, generally, unwillingness to sacrifice
-yourself for others.`
+      text: `Jūsų sutariamumas (angl. Agreeableness) yra vidutinis, tai rodo, kad jums rūpi kitų poreikiai, tačiau dažniausiai nesate linkęs aukotis dėl kitų.`
     },
     {
       score: 'high', // do not translate this line
-      text: `Your high level of Agreeableness indicates a strong interest in
-others' needs and well-being. You are pleasant, sympathetic, and
-cooperative.`
+      text: `Jūsų aukštas sutariamumas (angl. Agreeableness) rodo stiprų rūpestį kitų poreikiais ir gerove. Esate malonus, užjaučiantis ir bendradarbiaujantis žmogus.`
     }
   ],
   facets: [
     {
       facet: 1,
-      title: 'Trust',
-      text: `A person with high trust assumes that most people
-are fair, honest, and have good intentions. Persons low in trust
-see others as selfish, devious, and potentially dangerous.`
+      title: 'Pasitikėjimas',
+      text: `Asmuo, turintis aukštą pasitikėjimo lygį, mano, kad dauguma žmonių yra sąžiningi, teisingi ir turi gerų ketinimų. Žmonės, kuriems būdingas žemas pasitikėjimas, kitus mato kaip savanaudžius, klastingus ir galimai pavojingus.`
     },
     {
       facet: 2,
-      title: 'Morality',
-      text: `High scorers on this scale see no need for
-pretense or manipulation when dealing with others and are therefore
-candid, frank, and sincere. Low scorers believe that a certain
-amount of deception in social relationships is necessary. People
-find it relatively easy to relate to the straightforward
-high-scorers on this scale. They generally find it more difficult
-to relate to the unstraightforward low-scorers on this scale. It
-should be made clear that low scorers are not unprincipled
-or immoral; they are simply more guarded and less willing to openly
-reveal the whole truth.`
+      title: 'Moralė',
+      text: `Žmonės, surinkę aukštą šio rodiklio įvertinimą, mano, kad bendraujant su kitais nereikia apsimetinėti ar manipuliuoti, todėl jie yra atviri, nuoširdūs ir tiesūs. Tie, kurių įvertinimas žemas, tiki, kad tam tikras apgaulės lygis socialiniuose santykiuose yra būtinas. Su aukštą įvertinimą turinčiais žmonėmis paprastai lengviau bendrauti dėl jų tiesumo. Tuo tarpu su žemu įvertinimu pasižyminčiais asmenimis dažnai sunkiau užmegzti ryšį dėl jų uždarumo. Reikėtų pabrėžti, kad žemi įvertinimai nereiškia, jog žmogus yra amoralus ar neturi principų – tiesiog jis yra atsargesnis ir nenori atvirai atskleisti visos tiesos.`
     },
     {
       facet: 3,
-      title: 'Altruism',
-      text: `Altruistic people find helping other people
-genuinely rewarding. Consequently, they are generally willing to
-assist those who are in need. Altruistic people find that doing
-things for others is a form of self-fulfillment rather than
-self-sacrifice. Low scorers on this scale do not particularly like
-helping those in need. Requests for help feel like an imposition
-rather than an opportunity for self-fulfillment.`
+      title: 'Altruizmas',
+      text: `Altruistiški žmonės jaučia nuoširdų pasitenkinimą padėdami kitiems, todėl paprastai yra linkę pagelbėti tiems, kuriems reikia pagalbos. Jiems rūpinimasis kitais – tai savirealizacijos, o ne savęs aukojimo forma. Tuo tarpu žemą šio rodiklio įvertinimą turintys žmonės nėra linkę padėti kitiems – prašymai padėti jiems atrodo kaip našta, o ne galimybė save realizuoti.`
     },
     {
       facet: 4,
-      title: 'Cooperation',
-      text: `Individuals who score high on this scale
-dislike confrontations. They are perfectly willing to compromise or
-to deny their own needs in order to get along with others. Those
-who score low on this scale are more likely to intimidate others to
-get their way.`
+      title: 'Bendradarbiavimas',
+      text: `Aukštą šio rodiklio įvertinimą turintys žmonės vengia konfliktų. Jie linkę nusileisti ar atsisakyti savo poreikių, kad tik palaikytų gerus santykius su kitais. Tuo tarpu žemą įvertinimą turintys asmenys dažniau linkę daryti spaudimą ar net gąsdinti kitus, kad pasiektų savo tikslų.`
     },
     {
       facet: 5,
-      title: 'Modesty',
-      text: `High scorers on this scale do not like to claim
-that they are better than other people. In some cases this attitude
-may derive from low self-confidence or self-esteem. Nonetheless,
-some people with high self-esteem find immodesty unseemly. Those
-who are willing to describe themselves as superior tend to
-be seen as disagreeably arrogant by other people.`
+      title: 'Kuklumas',
+      text: `Žmonės, surinkę aukštą balą šioje skalėje, nemėgsta teigti, kad yra geresni už kitus. Kai kuriais atvejais toks požiūris gali kilti iš žemos savivertės ar nepasitikėjimo savimi. Vis dėlto kai kurie žmonės, turintys aukštą savivertę, kuklumą laiko tinkamu elgesiu. Tie, kurie linkę save apibūdinti kaip pranašesnius už kitus, dažnai aplinkinių yra vertinami kaip nemaloniai arogantiški.`
     },
     {
       facet: 6,
-      title: 'Sympathy',
-      text: `People who score high on this scale are
-tenderhearted and compassionate. They feel the pain of others
-vicariously and are easily moved to pity. Low scorers are not
-affected strongly by human suffering. They pride themselves on
-making objective judgments based on reason. They are more concerned
-with truth and impartial justice than with mercy.`
+      title: 'Atjauta',
+      text: `Žmonės, surinkę aukštą balą šioje skalėje, yra jautrūs ir užjaučiantys. Jie linkę įsijausti į kitų skausmą ir lengvai susigraudina. Žmonės, surinkę žemą balą, nereaguoja į kitų kančias. Jie didžiuojasi gebėjimu priimti objektyvius sprendimus, remdamiesi protu. Jiems labiau rūpi tiesa ir nešališkas teisingumas nei gailestingumas.`
     }
   ]
 }
