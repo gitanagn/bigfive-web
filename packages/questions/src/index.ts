@@ -58,11 +58,3 @@ export type Info = {
   questions: number;
   languages: Language[]
 };
-// Hack – statiniai importai, kad Vercel įtrauktų kalbas į build
-if (false) {
-  import('./data/lt/questions');
-  import('./data/lt/choices');
-  // prireikus, ir kitos kalbos:
-  // import('./data/ro/questions');
-  // import('./data/ro/choices');
-};
