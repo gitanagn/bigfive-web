@@ -17,13 +17,18 @@ export default function TestPage({
   searchParams: { lang }
 }: Props) {
   unstable_setRequestLocale(locale);
-  const language =
-    lang || (questionLanguages.some((l) => l.id === locale) ? locale : 'en');
+
+const matchedLang = questionLanguages.find(
+  (l) => l.code === (lang || locale)
+);
+const language: LanguageCode = matchedLang?.code || 'en';
+
   const questions = getItems(language);
   const t = useTranslations('test');
+
   return (
     <>
-      <div className='flex'>
+      <div className="flex">
         <TestLanguageSwitch
           availableLanguages={questionLanguages}
           language={language}
