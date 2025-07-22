@@ -1,5 +1,5 @@
 {
-  "name": "@bigfive-org/questions",
+  "name": "questions",
   "description": "Module for returning Big Five Johnson 120 IPIP-NEO-PI-R items",
   "version": "1.4.0",
   "license": "MIT",
