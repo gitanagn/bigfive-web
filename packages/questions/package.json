@@ -41,6 +41,6 @@
     "typescript": "5.4.3"
   },
  "dependencies": {
-  "@bigfive-org/questions": "file:../packages/questions"
+  "@bigfive-org/questions": "file:../old-packages/questions"
 }
 }
