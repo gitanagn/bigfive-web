@@ -1,4 +1,4 @@
-import { getItems, getInfo } from '@bigfive-org/questions';
+import { getItems, getInfo } from '@/lib/questions';
 import { Survey } from './survey';
 import { useTranslations } from 'next-intl';
 import { saveTest } from '@/actions';
