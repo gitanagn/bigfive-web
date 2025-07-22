@@ -40,5 +40,7 @@
     "ts-node": "10.9.2",
     "typescript": "5.4.3"
   },
-  "dependencies": {}
+ "dependencies": {
+  "@bigfive-org/questions": "file:../packages/questions"
+}
 }
