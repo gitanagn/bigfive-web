@@ -9,12 +9,6 @@
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
-  {
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ]
-},
   "dependencies": {
     "@bigfive-org/questions": "file:../packages/questions",
     "@bigfive-org/results": "1.2.9",
