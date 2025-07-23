@@ -6,9 +6,8 @@ import { RadioGroup, Radio } from '@nextui-org/radio';
 import { Progress } from '@nextui-org/progress';
 import confetti from 'canvas-confetti';
 import { useRouter } from '@/navigation';
-
 import { CloseIcon, InfoIcon } from '@/components/icons';
-import { type Question } from '@bigfive-org/questions';
+import { type Question } from '@/lib/questions';
 import { sleep, formatTimer, isDev } from '@/lib/helpers';
 import useWindowDimensions from '@/hooks/useWindowDimensions';
 import useTimer from '@/hooks/useTimer';

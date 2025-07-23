@@ -2,7 +2,7 @@
 
 import { Select, SelectItem } from '@nextui-org/select';
 import { ChangeEvent } from 'react';
-import { Language } from '@bigfive-org/questions';
+import type {   Language } from '@/lib/questions';
 import { useRouter } from '@/navigation';
 
 interface TestLanguageSwitchProps {
@@ -35,8 +35,8 @@ export const TestLanguageSwitch = ({
         items={availableLanguages}
       >
         {(language) => (
-          <SelectItem key={language.id} value={language.id}>
-            {language.text}
+          <SelectItem key={language.code} value={language.code}>
+            {language.name}
           </SelectItem>
         )}
       </Select>
