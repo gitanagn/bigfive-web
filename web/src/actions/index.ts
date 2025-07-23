@@ -3,12 +3,15 @@
 import { connectToDatabase } from '@/db';
 import { ObjectId } from 'mongodb';
 import { B5Error, DbResult, Feedback } from '@/types';
-import calculateScore from '@bigfive-org/score';
+import {processAnswers} from '@/lib/score';
 import generateResult, {
-  getInfo,
-  Language,
+  getInfo
+} from '@/lib/results';
+import {
   Domain
-} from '@bigfive-org/results';
+} from '@/types';
+import { Language } from '@/types';
+
 
 const collectionName = process.env.DB_COLLECTION || 'results';
 const resultLanguages = getInfo().languages;
@@ -21,11 +24,13 @@ export type Report = {
   results: Domain[];
 };
 
+
 export async function getTestResult(
   id: string,
   language?: string
 ): Promise<Report | undefined> {
   'use server';
+
   try {
     const query = { _id: new ObjectId(id) };
     const db = await connectToDatabase();
@@ -40,9 +45,10 @@ export async function getTestResult(
     }
     const selectedLanguage =
       language ||
-      (!!resultLanguages.find((l) => l.id == report.lang) ? report.lang : 'en');
-    const scores = calculateScore({ answers: report.answers });
-    const results = generateResult({ lang: selectedLanguage, scores });
+      (!!resultLanguages.find((l) => l.code == report.lang) ? report.lang : 'en');
+    const scores = processAnswers(report.answers);
+
+    const results = await generateResult({ language: selectedLanguage, scores });
     return {
       id: report._id.toString(),
       timestamp: report.dateStamp,

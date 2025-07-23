@@ -2,7 +2,7 @@
 
 import { Select, SelectItem } from '@nextui-org/select';
 import { ChangeEvent } from 'react';
-import type {   Language } from '@/lib/questions';
+import { Language } from '@/types';
 import { useRouter } from '@/navigation';
 
 interface TestLanguageSwitchProps {

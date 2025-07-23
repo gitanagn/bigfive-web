@@ -2,7 +2,7 @@
 
 import { subtitle, heading } from '@/components/primitives';
 import Link from 'next/link';
-import { Facet, Domain } from '@bigfive-org/results';
+import { Domain, FacetResult } from '@/types';
 import { BarChart } from '@/components/bar-chart';
 import ReadMore from '@/components/read-more';
 
@@ -34,7 +34,7 @@ export const DomainPage = ({
         <p>{domain.text}</p>
         <BarChart max={20} results={domain.facets} />
         <div>
-          {domain.facets.map((facet: Facet, index: number) => (
+          {domain.facets.map((facet: FacetResult, index: number) => (
             <div key={index} className='mt-5'>
               <Link href={`#${facet.title}`}>
                 <h3 className={subtitle()} id={facet.title}>

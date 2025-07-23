@@ -1,3 +1,4 @@
+import { LanguageCode } from '@/types';
 import { getTranslations } from 'next-intl/server';
 
 export type SiteConfig = typeof siteConfig;
@@ -6,14 +7,14 @@ export const basePath = 'https://bigfive-test.com';
 
 export const supportEmail = 'bigfive-test@rubynor.com';
 
-export type Language = {
-  code: string;
+export type SiteLanguage = {
+  code: LanguageCode;
   name: string;
   countryCode?: string;
   map?: string[];
 };
 
-export const languages: Language[] = [
+export const languages: SiteLanguage[] = [
   { code: 'en', name: 'English', countryCode: 'us', map: ['en-GB'] },
   { code: 'ar', name: 'Arabic', map: ['ar-sa'] },
   { code: 'de', name: 'German', countryCode: 'de', map: ['de-DE'] },

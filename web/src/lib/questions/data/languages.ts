@@ -1,41 +1,5 @@
-export interface Language {
-  code: LanguageCode
-  name: string;
-}
 
-export type LanguageCode =
-  | "en"
-  | "lt"
-  | "zh-cn"
-  | "zh-hk"
-  | "hi"
-  | "es"
-  | "fr"
-  | "ru"
-  | "id"
-  | "ur"
-  | "de"
-  | "ja"
-  | "it"
-  | "th"
-  | "uk"
-  | "da"
-  | "no"
-  | "is"
-  | "fi"
-  | "nl"
-  | "ro"
-  | "sq"
-  | "sv"
-  | "hr"
-  | "et"
-  | "pt-br"
-  | "ar"
-  | "he"
-  | "pl"
-  | "ko"
-  | "hu"
-  | "fa";
+import { Language } from '@/types';
 
 const languages: Language[] = [
   { code: "en", name: "English" },

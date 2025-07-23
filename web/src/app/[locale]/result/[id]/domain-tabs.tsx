@@ -1,7 +1,7 @@
 'use client';
 
 import { Button, ButtonGroup, Select, SelectItem } from '@nextui-org/react';
-import { Domain } from '@bigfive-org/results';
+import { Domain } from '@/types';
 import { useState } from 'react';
 import { DomainPage } from './domain';
 
@@ -30,7 +30,7 @@ export const DomainTabs = ({
 
   const handleSelectionChange = (e: React.ChangeEvent<HTMLSelectElement>) =>
     setActive(e.target.value);
-
+  
   return (
     <>
       <div className='flex justify-center my-10'>
@@ -57,7 +57,7 @@ export const DomainTabs = ({
         </Select>
       </div>
       {activeDomains.map((result: Domain, index: number) => (
-        <DomainPage
+      <DomainPage
           key={index}
           domain={result}
           scoreText={scoreText}

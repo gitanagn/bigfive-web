@@ -2,7 +2,7 @@
 
 import { Select, SelectItem } from '@nextui-org/select';
 import { ChangeEvent } from 'react';
-import { Language } from '@bigfive-org/results';
+import { Language } from '@/types';
 import { useRouter } from '@/navigation';
 
 export const ReportLanguageSwitch = ({
@@ -32,8 +32,8 @@ export const ReportLanguageSwitch = ({
         label='Report language'
       >
         {availableLanguages.map((lang) => (
-          <SelectItem key={lang.id} value={lang.id} textValue={lang.text}>
-            {lang.text}
+          <SelectItem key={lang.code} value={lang.code} textValue={lang.name}>
+            {lang.name}
           </SelectItem>
         ))}
       </Select>

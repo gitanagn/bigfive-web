@@ -1,7 +1,7 @@
 'use client';
 import { ChangeEvent } from 'react';
 import { useLocale } from 'next-intl';
-import { languages, type Language } from '../config/site';
+import { languages, type SiteLanguage } from '../config/site';
 import { Select, SelectItem } from '@nextui-org/select';
 import { Avatar } from '@nextui-org/avatar';
 import { useRouter, usePathname } from '../navigation';
@@ -21,7 +21,7 @@ export default function LocaleSwitcher() {
     code: 'en',
     countryCode: 'us'
   };
-  const countryAvatar = (lang: Language) =>
+  const countryAvatar = (lang: SiteLanguage) =>
     lang.countryCode ? (
       <Avatar
         alt={lang.name}
