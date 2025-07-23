@@ -1,9 +1,9 @@
-import { getItems, getInfo } from '@/lib/questions';
+import { getItems, getInfo, LanguageCode } from '@/lib/questions';
 import { Survey } from './survey';
-import { useTranslations } from 'next-intl';
 import { saveTest } from '@/actions';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { TestLanguageSwitch } from './test-language-switch';
+import {getTranslations} from 'next-intl/server';
 
 const questionLanguages = getInfo().languages;
 
@@ -12,7 +12,7 @@ interface Props {
   searchParams: { lang?: string };
 }
 
-export default function TestPage({
+export default async function TestPage({
   params: { locale },
   searchParams: { lang }
 }: Props) {
@@ -23,8 +23,8 @@ const matchedLang = questionLanguages.find(
 );
 const language: LanguageCode = matchedLang?.code || 'en';
 
-  const questions = getItems(language);
-  const t = useTranslations('test');
+  const questions = await getItems(language);
+  const t = await getTranslations('test');
 
   return (
     <>
