@@ -1,7 +1,8 @@
-import languages, { Language, LanguageCode } from './data/languages';
+import { Language } from '@/types';
+import languages from './data/languages';
 // Static import mapping for all available languages
 
-const questionFiles: Record<LanguageCode, () => Promise<{ default: any[] }>> = {
+const questionFiles: Record<string, () => Promise<{ default: any[] }>> = {
   ar: () => import('./data/ar/questions'),
   da: () => import('./data/da/questions'),
   de: () => import('./data/de/questions'),
@@ -36,7 +37,7 @@ const questionFiles: Record<LanguageCode, () => Promise<{ default: any[] }>> = {
   'zh-hk': () => import('./data/zh-hk/questions'),
 };
 
-const choiceFiles: Record<LanguageCode, () => Promise<{ default: ChoiceKeyed }>> = {
+const choiceFiles: Record<string, () => Promise<{ default: ChoiceKeyed }>> = {
   ar: () => import('./data/ar/choices'),
   da: () => import('./data/da/choices'),
   de: () => import('./data/de/choices'),
@@ -71,7 +72,7 @@ const choiceFiles: Record<LanguageCode, () => Promise<{ default: ChoiceKeyed }>>
   'zh-hk': () => import('./data/zh-hk/choices'),
 };
 
-export async function getItems(languageCode: LanguageCode = 'en'): Promise<Question[]> {
+export async function getItems(languageCode: string = 'en'): Promise<Question[]> {
   try {
     if (!questionFiles[languageCode] || !choiceFiles[languageCode]) {
       throw new Error(`Language ${languageCode} not supported.`);
@@ -133,4 +134,3 @@ export type Info = {
   languages: Language[]
 };
 
-export type { Language, LanguageCode }

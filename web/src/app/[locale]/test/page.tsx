@@ -1,4 +1,4 @@
-import { getItems, getInfo, LanguageCode } from '@/lib/questions';
+import { getItems, getInfo } from '@/lib/questions';
 import { Survey } from './survey';
 import { saveTest } from '@/actions';
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -21,7 +21,7 @@ export default async function TestPage({
 const matchedLang = questionLanguages.find(
   (l) => l.code === (lang || locale)
 );
-const language: LanguageCode = matchedLang?.code || 'en';
+const language: string = matchedLang?.code || 'en';
 
   const questions = await getItems(language);
   const t = await getTranslations('test');

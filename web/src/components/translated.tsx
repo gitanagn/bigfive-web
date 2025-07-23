@@ -1,9 +1,9 @@
 import { Avatar } from '@nextui-org/react';
 import { title } from '@/components/primitives';
-import { languages, Language } from '@/config/site';
+import { languages, SiteLanguage } from '@/config/site';
 
 export const Translated = () => {
-  const CountryAvatar = ({ lang }: { lang: Language }) =>
+  const CountryAvatar = ({ lang }: { lang: SiteLanguage }) =>
     lang.countryCode ? (
       <Avatar
         alt={lang.name}
