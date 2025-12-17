@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test-b5</title>
+  </head>
+  <body>
+    <div>
+    <a href="#/tests/b5">Start B5 Test Version A</a>
+    </div>
+    <div>
+    <a href="#/tests/b5/compare">Result compare</a>
+    </div>
+    <div id="test-root"></div>
+    <script>
+      // Define global variables
+      window.TEST_CONFIG = {
+        SUBMIT_URL: 'http://localhost:3000', // Change to your backend URL
+        WP_NONCE: '' // Change to your WP nonce
+      };
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
