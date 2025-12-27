@@ -7,6 +7,7 @@ import { generateReport } from '@/lib/report';
 
 interface TestResultCompareProps {
   results: TestResult[];
+  product: any;
 }
 
 interface DomainSectionProps {
@@ -64,7 +65,7 @@ function DomainSection({ domain, domainTitle, domainDescription, domainReports, 
   );
 }
 
-function TestResultCompare({ results }: TestResultCompareProps) {
+function TestResultCompare({ results, product }: TestResultCompareProps) {
   const [activeSection, setActiveSection] = useState<DomainShort | null>(null);
 
   // Generate reports for all test results
@@ -116,6 +117,23 @@ function TestResultCompare({ results }: TestResultCompareProps) {
 
       {/* Overall Domain Comparison */}
       <div>
+        {product && (
+        <div className='mb-8'>
+       <ConsultationCTA
+        emoji="💜"
+        theme="purple"
+        ctaLabel={`Įsigyti išsamų testą už ${product.price} €`}
+        text={<div className='space-y-2'>
+          <h3 className="text-lg font-semibold mb-2">
+            {product.name}
+          </h3>
+          <div>
+            {product.short_description}
+          </div>
+        </div>}
+        ctaLink={`/krepselis/?add-to-cart=${product.id}&test_result=${results.map(r => r.code).join(',')}`}
+        className='mb-8' /></div>)}
+
         {/* <h2 className="text-2xl font-semibold text-gray-900 mb-4">Bendras palyginimas</h2> */}
         <CompareBarChart 
           max={120} 

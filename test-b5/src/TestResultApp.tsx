@@ -6,7 +6,8 @@ import { generateReport } from '@/lib/report';
 import { ConsultationCTA } from './components/ConsultationCTA';
 
 interface AppTestResultsProps {
-  results: TestResult
+  results: TestResult,
+  product: any
 }
 
 interface DomainSectionProps {
@@ -100,7 +101,7 @@ function DomainSection({ domain, isExpanded, onToggle, onInView }: DomainSection
   );
 }
 
-function App({ results }: AppTestResultsProps) {
+function App({ results, product }: AppTestResultsProps) {
   const report: FinalReport = generateReport(results)
   const [expandedDomains, setExpandedDomains] = useState<Record<DomainShort, boolean>>({} as Record<DomainShort, boolean>)
   const [activeSection, setActiveSection] = useState<DomainShort | null>(null)
@@ -121,11 +122,23 @@ function App({ results }: AppTestResultsProps) {
 
   return (
     <div>
-
+      {product && (
+        <div className='mb-8'>
        <ConsultationCTA
         emoji="🧠"
         theme="orange"
-        className='mb-8' />
+        ctaTheme='button'
+        ctaLabel={`Įsigyti išsamų testą už ${product.price} €`}
+        text={<div className='space-y-2'>
+          <h3 className="text-lg font-semibold mb-2">
+            {product.name}
+          </h3>
+          <div>
+            {product.short_description}
+          </div>
+        </div>}
+        ctaLink={`/krepselis/?add-to-cart=${product.id}&test_result=${results.code}`}
+        className='mb-8' /></div>)}
 
                <ConsultationCTA
         emoji="🤝"
@@ -179,11 +192,23 @@ function App({ results }: AppTestResultsProps) {
         ))}
       </div>
 
-        
+              {product && (
+        <div className='mt-8'>
        <ConsultationCTA
         emoji="💜"
         theme="purple"
-        className='mt-8' />
+        ctaTheme='button'
+        ctaLabel={`Įsigyti išsamų testą už ${product.price} €`}
+        text={<div className='space-y-2'>
+          <h3 className="text-lg font-semibold mb-2">
+            {product.name}
+          </h3>
+          <div>
+            {product.short_description}
+          </div>
+        </div>}
+        ctaLink={`/krepselis/?add-to-cart=${product.id}&test_result=${results.code}`}
+        className='mb-8' /></div>)}
     </div>
   )
 }

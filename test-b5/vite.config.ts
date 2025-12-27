@@ -12,7 +12,7 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: '../www/wp-content/plugins/psy-tests/assets/b5',
+    outDir: '../../www/wp-content/plugins/psy-tests/assets/b5',
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
