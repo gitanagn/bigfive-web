@@ -38,7 +38,7 @@ function DomainSection({ domain, isExpanded, onToggle, onInView }: DomainSection
         onClick={onToggle}
         className="mt-3 text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors"
       >
-        {isExpanded ? 'Show less' : 'Read more'}
+        {isExpanded ? 'Rodyti mažiau' : 'Rodyti daugiau'}
       </button>
       {isExpanded && (
         <div 

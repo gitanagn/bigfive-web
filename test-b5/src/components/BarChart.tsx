@@ -88,7 +88,7 @@ export const BarChart = ({ max, results, facetNames, isComparison = false }: Bar
       tooltip: {
         enabled: true,
         y: {
-          formatter: (val: number) => `${val} points`
+          formatter: (val: number) => `${val} taškai`
         }
       }
     };
@@ -161,14 +161,14 @@ export const BarChart = ({ max, results, facetNames, isComparison = false }: Bar
     tooltip: {
       enabled: true,
       y: {
-        formatter: (val: number) => `${val} points`
+        formatter: (val: number) => `${val} taškai`
       }
     }
   };
 
   const series = [
     {
-      name: 'Score',
+      name: 'Taškai',
       data: results.map((result: any) => result.score)
     }
   ];

@@ -101,7 +101,7 @@ export const CompareBarChart = ({ max, facetNames, participants }: CompareBarCha
     tooltip: {
       enabled: true,
       y: {
-        formatter: (val: number) => `${val} points`
+        formatter: (val: number) => `${val} taškai`
       }
     }
   };
