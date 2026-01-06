@@ -1,6 +1,6 @@
 import Modal from 'react-modal'
 import { Outlet } from "react-router"
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 // Set app element for accessibility
 // if (typeof document !== 'undefined') {
@@ -8,12 +8,28 @@ import { useEffect } from 'react'
 // }
 
 function ContentModal() {
+  const [isMobile, setIsMobile] = useState(false);
+
     useEffect(() => {
         document.body.style.overflow = 'hidden'
   
       return () => {
         document.body.style.overflow = ''
       }
+    }, [])
+
+
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth <= 768) {
+          setIsMobile(true);
+        } else {
+          setIsMobile(false);
+        }
+      }
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
     }, [])
 
   return (
@@ -34,9 +50,10 @@ function ContentModal() {
           position: 'relative',
           inset: 'auto',
           maxWidth: '1400px',
-          maxHeight: '90vh',
-          padding: '2rem',
-          borderRadius: '8px',
+          width: isMobile ? '95%' : 'auto',
+          maxHeight: isMobile ? '100dvh' : '90vh',
+          padding: isMobile ? '1rem' : '2rem',
+          borderRadius: isMobile ? '0' : '8px',
           border: '1px solid #ccc',
           background: '#fff',
           overflow: 'auto'

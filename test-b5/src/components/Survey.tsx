@@ -47,6 +47,7 @@ export const Survey = ({
   const [inProgress, setInProgress] = useState(false);
   const { width } = useWindowDimensions();
   const [error, setError] = useState<string | null>(null);
+  const [movedForward, setMovedForward] = useState(false);
   
   const isTestDone = questions.length === answers.length;
   const seconds = useTimer(isTestDone);
@@ -89,6 +90,7 @@ export const Survey = ({
   const backButtonDisabled = currentQuestionIndex === 0 || loading;
 
   async function handleAnswer(id: string, value: string) {
+    setMovedForward(true);
     const question = questions.find((question) => question.id === id);
     if (!question) return;
 
@@ -201,7 +203,7 @@ export const Survey = ({
   }
 
   return (
-    <div className='mt-2 w-2xl'>
+    <div className='mt-2 w-full md:w-2xl'>
       <Progress
         aria-label='Progress bar'
         value={progress}
@@ -213,7 +215,7 @@ export const Survey = ({
         size='lg'
         color='secondary'
       />
-      {restored && (
+      {restored && !movedForward && (
         <Card className='mt-4 bg-warning/20 text-warning-600 dark:text-warning'>
           <CardHeader className='justify-between'>
             <Button isIconOnly variant='light' color='warning'>
@@ -275,9 +277,9 @@ export const Survey = ({
                   <div key={index + question.id} className='flex-1 min-w-0'>
                     <Radio
                       value={choice.score.toString()}
-                      className='flex-col-reverse md:flex-col items-center justify-center text-center p-3 md:p-4s border-2 rounded-lg transition-all hover:border-purple-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-100 dark:has-[:checked]:bg-purple-900/30 has-[:checked]:shadow-md h-full min-h-[80px] md:min-h-[50px] [&>input]:hidden'
+                      className='flex-col-reverse md:flex-col items-center justify-center text-center p-2 md:p-4s border-2 rounded-lg transition-all hover:border-purple-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-100 dark:has-[:checked]:bg-purple-900/30 has-[:checked]:shadow-md h-full min-h-[60px] md:min-h-[50px] [&>input]:hidden'
                     >
-                      <span className='text-xs md:text-sm font-medium whitespace-normal break-words'>{choice.text}</span>
+                      <span className='text-md md:text-sm font-medium whitespace-normal break-words'>{choice.text}</span>
                     </Radio>
                   </div>
                 ))}
