@@ -125,7 +125,7 @@ function B5TestCompare() {
                 onClick={handleAddCode}
                 disabled={!canAddMore || !currentCode}
                 className="px-6"
-                color="primary"
+                color="brand"
               >
                 Pridėti
               </Button>
@@ -146,7 +146,7 @@ function B5TestCompare() {
             <Button
               onClick={handleCompare}
               className="w-full py-3 text-base"
-              color="primary"
+              color="brand"
                 type="button"
             >
               Palyginti rezultatus ({codes.length})

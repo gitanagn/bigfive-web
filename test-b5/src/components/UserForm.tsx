@@ -80,12 +80,12 @@ export const UserForm = ({ onSubmit }: UserFormProps) => {
             htmlFor="privacy"
             className="text-sm text-gray-700"
           >
-            Sutinku, kad šis el. pašto adresas bus naudojamas testo rezultatams išsiųsti. Skaičiau ir sutinku su{' '}
+            Sutinku gauti laiškus iš psichologija.lt. Skaičiau ir sutinku su {' '}
             <a
               href="/privatumo-politika"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 underline"
+              className="text-brand-dark-600 hover:text-brand-dark-800 underline"
             >
               privatumo politika
             </a>
@@ -98,7 +98,7 @@ export const UserForm = ({ onSubmit }: UserFormProps) => {
           disabled={!isValid || isSubmitting}
           isLoading={isSubmitting}
           className="w-full py-3 text-base"
-          color="primary"
+          color="brand"
         >
           {isSubmitting ? 'Kraunama...' : 'Tęsti'}
         </Button>

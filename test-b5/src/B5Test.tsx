@@ -29,9 +29,18 @@ function B5Test() {
 
   const isUserReady = testUser?.name && testUser?.email
 
+  const [isDeveloper, setIsDeveloper] = useState(false)
+  const [headerClickCount, setHeaderClickCount] = useState(0)
+
+  useEffect(() => {
+    if (headerClickCount >= 7) {
+      setIsDeveloper(true)
+    }
+  }, [headerClickCount])
+
   return (
     <div>
-      <div className="border-b border-gray-300  mb-6 space-y-4">
+      <div onClick={() => setHeaderClickCount(headerClickCount + 1)} className="border-b border-gray-300  mb-6 space-y-4">
         <h2 className="text-2xl font-semibold text-gray-800 text-center">
           Asmenybės testas
         </h2>
@@ -47,7 +56,7 @@ function B5Test() {
           questions={questions}
           userEmail={testUser.email}
           userName={testUser.name}
-          debug={true}
+          debug={isDeveloper}
         />
       }
     </div>

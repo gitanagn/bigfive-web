@@ -122,7 +122,7 @@ function TestResultCompare({ results, product }: TestResultCompareProps) {
        <ConsultationCTA
         emoji="💜"
         theme="purple"
-        ctaLabel={`Įsigyti išsamų testą už ${product.price} €`}
+        ctaLabel={`Įsigyti psichologo analizę už ${product.price} €`}
         text={<div className='space-y-2'>
           <h3 className="text-lg font-semibold mb-2">
             {product.name}

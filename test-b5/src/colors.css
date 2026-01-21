@@ -1,0 +1,9 @@
+@theme {
+    --color-brand: #4ca585; /*pagrindine žalia*/
+    --color-brand-dark: #003e52; /*tamsi*/
+    --color-brand-accent-1: #d9c4e6; /*rožinė*/
+    --color-brand-accent-2: #e5f3ef; /*žalsva*/
+    --color-brand-accent-3: #c5d8e6; /*melsva*/
+    --color-brand-accent-4: #b6dcd2; /*ryškesnė žalsva*/
+    --color-brand-accent-5: #70609e; /*alyvinė tamsi*/
+}

@@ -1,7 +1,7 @@
 import { Card, CardHeader } from './Card';
 import type { ReactNode } from 'react';
 
-type Theme = 'blue' | 'green' | 'purple' | 'orange' | 'gray';
+type Theme = 'blue' | 'green' | 'purple' | 'orange' | 'gray' | 'brand-green';
 
 interface ConsultationCTAProps {
   className?: string;
@@ -67,6 +67,15 @@ const themeStyles: Record<Theme, {
     buttonText: 'text-white',
     buttonBorder: 'border-gray-700',
   },
+  'brand-green': {
+    bg: 'bg-brand',
+    border: 'border-brand',
+    text: 'text-brand-dark',
+    hover: 'hover:text-brand-dark',
+    buttonBg: 'bg-brand hover:bg-brand-dark',
+    buttonText: 'text-white',
+    buttonBorder: 'border-brand',
+  },
 };
 
 export const ConsultationCTA = ({ 
@@ -92,7 +101,7 @@ export const ConsultationCTA = ({
             <a
               href={ctaLink}
               aria-label={ctaLabel}
-              className={`mt-4 inline-block px-4 py-2 rounded font-bold shadow transition-colors border ${themeObj.buttonBg} ${themeObj.buttonText} ${themeObj.buttonBorder}`}
+              className={`mt-4 no-underline inline-block px-4 py-2 rounded font-bold shadow transition-colors border ${themeObj.buttonBg} ${themeObj.buttonText} ${themeObj.buttonBorder}`}
             >
               {ctaLabel}
             </a>
@@ -105,7 +114,6 @@ export const ConsultationCTA = ({
               {ctaLabel}
             </a>
           )}
-          .
         </div>
         <div className='w-10'></div>
       </CardHeader>

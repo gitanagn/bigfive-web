@@ -7,7 +7,7 @@ interface ProgressProps extends HTMLAttributes<HTMLDivElement> {
   label?: string;
   showValueLabel?: boolean;
   size?: 'sm' | 'md' | 'lg';
-  color?: 'primary' | 'secondary' | 'warning' | 'danger' | 'success';
+  color?: 'primary' | 'secondary' | 'warning' | 'danger' | 'success' |'brand';
 }
 
 export const Progress = ({
@@ -38,7 +38,8 @@ export const Progress = ({
     secondary: 'bg-purple-600',
     warning: 'bg-yellow-500',
     danger: 'bg-red-600',
-    success: 'bg-green-600'
+    success: 'bg-green-600',
+    brand: 'bg-brand'
   };
 
   return (

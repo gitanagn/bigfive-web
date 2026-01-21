@@ -5,13 +5,21 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test-b5</title>
+        <style>
+        .test-control-header {
+          display: flex;
+          gap: 10px;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 10px;
+        }
+    </style>
   </head>
   <body>
-    <div>
-    <a href="#/tests/b5">Start B5 Test Version A</a>
-    </div>
-    <div>
-    <a href="#/tests/b5/compare">Result compare</a>
+    <div class="test-control-header">
+      <a href="#/tests/b5">Start B5 Test Version A</a>
+      <a href="#/tests/b5/compare">Result compare</a>
+      <a href="/results.html">Results page</a>
     </div>
     <div id="test-root"></div>
     <script>

@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import type { ButtonHTMLAttributes } from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  color?: 'primary' | 'secondary' | 'warning' | 'danger';
+  color?: 'primary' | 'secondary' | 'warning' | 'danger' | 'brand' | 'brand-accent-2' | 'brand-dark'
   variant?: 'solid' | 'light';
   isIconOnly?: boolean;
   isLoading?: boolean;
@@ -53,7 +53,25 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500 disabled:bg-red-300',
         light:
           'bg-red-100 hover:bg-red-200 text-red-700 focus:ring-red-500 disabled:bg-red-50'
-      }
+      },
+      brand: {
+        solid:
+          'bg-brand hover:bg-brand-dark text-white',
+        light:
+          'bg-brand hover:bg-brand-dark text-white'
+      },
+      'brand-accent-2': {
+        solid:
+          'bg-brand-accent-2 text-brand-dark',
+        light:
+          'bg-brand-accent-2 text-brand-dark'
+      },
+      'brand-dark': {
+        solid:
+          'bg-brand-dark hover:bg-brand-dark text-white',
+        light:
+          'bg-brand-dark hover:bg-brand-dark text-white'
+      },
     };
 
     const isDisabledOrLoading = isDisabled || disabled || isLoading;
@@ -61,7 +79,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         ref={ref}
-        className={`${baseClasses} ${sizeClasses} ${colorClasses[color][variant]} ${
+        className={`no-underline ${baseClasses} ${sizeClasses} ${colorClasses[color][variant]} ${
           isDisabledOrLoading ? 'cursor-not-allowed opacity-60' : ''
         } ${className}`}
         disabled={isDisabledOrLoading}

@@ -37,7 +37,7 @@ function DomainSection({ domain, isExpanded, onToggle, onInView }: DomainSection
       <p className="text-gray-600 leading-relaxed">{domain.shortDescription}</p>
       <button
         onClick={onToggle}
-        className="mt-3 text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors"
+        className="mt-3 text-brand hover:underline hover:cursor-pointer text-sm font-medium transition-colors"
       >
         {isExpanded ? 'Rodyti mažiau' : 'Rodyti daugiau'}
       </button>
@@ -126,9 +126,9 @@ function App({ results, product }: AppTestResultsProps) {
         <div className='mb-8'>
        <ConsultationCTA
         emoji="🧠"
-        theme="orange"
+        theme="brand-green"
         ctaTheme='button'
-        ctaLabel={`Įsigyti išsamų testą už ${product.price} €`}
+        ctaLabel={`Įsigyti psichologo analizę už ${product.price} €`}
         text={<div className='space-y-2'>
           <h3 className="text-lg font-semibold mb-2">
             {product.name}
@@ -142,7 +142,7 @@ function App({ results, product }: AppTestResultsProps) {
 
                <ConsultationCTA
         emoji="🤝"
-        theme="green"
+        theme="brand-green"
         text={<div className='space-y-2'>
           <h3 className="text-lg font-semibold mb-2">
           Norite palyginti testo rezultatus su draugais ar šeima?   
@@ -151,6 +151,7 @@ function App({ results, product }: AppTestResultsProps) {
             Jūsų testo kodas yra <strong>{results.code}</strong>
           </div>
         </div>}
+        ctaTheme='button'
         ctaLink={`#/tests/b5/compare/${results.code}`}
         ctaLabel='Palyginti dabar'
         className='mb-8' />
@@ -164,8 +165,8 @@ function App({ results, product }: AppTestResultsProps) {
                 onClick={() => scrollToSection(domain.domain)}
                 className={`w-full text-left px-3 py-2 text-sm rounded transition-colors ${
                   activeSection === domain.domain
-                    ? 'bg-blue-100 text-blue-700 font-medium'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                    ? 'bg-brand-accent-2 text-brand-dark font-medium'
+                    : 'text-gray-600 hover:text-brand-dark hover:bg-brand-accent-2'
                 }`}
                 title={domain.title}
               >
@@ -196,9 +197,9 @@ function App({ results, product }: AppTestResultsProps) {
         <div className='mt-8'>
        <ConsultationCTA
         emoji="💜"
-        theme="purple"
+        theme="brand-green"
         ctaTheme='button'
-        ctaLabel={`Įsigyti išsamų testą už ${product.price} €`}
+        ctaLabel={`Įsigyti psichologo analizę už ${product.price} €`}
         text={<div className='space-y-2'>
           <h3 className="text-lg font-semibold mb-2">
             {product.name}
