@@ -46,7 +46,7 @@ function B5Test() {
         </h2>
 
         <p className="text-gray-600 mb-6 text-center">
-          Atsakykite į klausimus ir sužinokite savo asmenybės tipą!
+          Atsakykite į klausimus ir sužinokite savo asmenybės bruožus!
         </p>
       </div>
 

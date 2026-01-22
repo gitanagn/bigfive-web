@@ -122,23 +122,7 @@ function App({ results, product }: AppTestResultsProps) {
 
   return (
     <div>
-      {product && (
-        <div className='mb-8'>
-       <ConsultationCTA
-        emoji="🧠"
-        theme="brand-green"
-        ctaTheme='button'
-        ctaLabel={`Įsigyti psichologo analizę už ${product.price} €`}
-        text={<div className='space-y-2'>
-          <h3 className="text-lg font-semibold mb-2">
-            {product.name}
-          </h3>
-          <div>
-            {product.short_description}
-          </div>
-        </div>}
-        ctaLink={`/krepselis/?add-to-cart=${product.id}&test_result=${results.code}`}
-        className='mb-8' /></div>)}
+    
 
                <ConsultationCTA
         emoji="🤝"
@@ -182,21 +166,12 @@ function App({ results, product }: AppTestResultsProps) {
       </div>
 
       <div className="mt-8 space-y-12">
-        {report.map((domain) => (
-          <DomainSection
-            key={domain.domain}
-            domain={domain}
-            isExpanded={expandedDomains[domain.domain] ?? false}
-            onToggle={() => toggleDomain(domain.domain)}
-            onInView={setActiveSection}
-          />
-        ))}
-      </div>
-
-              {product && (
-        <div className='mt-8'>
+        {report.map((domain, index) => {
+         return <>
+           {product && (index+1) % 2 == 0 && (
+        <div className='mb-8'>
        <ConsultationCTA
-        emoji="💜"
+        emoji="🧠"
         theme="brand-green"
         ctaTheme='button'
         ctaLabel={`Įsigyti psichologo analizę už ${product.price} €`}
@@ -208,7 +183,35 @@ function App({ results, product }: AppTestResultsProps) {
             {product.short_description}
           </div>
         </div>}
-        ctaLink={`/krepselis/?add-to-cart=${product.id}&test_result=${results.code}`}
+        ctaLink={`/produktas/${product.slug}?test_result=${results.code}`}
+        className='mb-8' /></div>)}
+         <DomainSection
+            key={domain.domain}
+            domain={domain}
+            isExpanded={expandedDomains[domain.domain] ?? false}
+            onToggle={() => toggleDomain(domain.domain)}
+            onInView={setActiveSection}
+          />
+         </>
+        })}
+      </div>
+
+              {product && (
+        <div className='mt-8'>
+       <ConsultationCTA
+        emoji="🧠"
+        theme="brand-green"
+        ctaTheme='button'
+        ctaLabel={`Įsigyti psichologo analizę už ${product.price} €`}
+        text={<div className='space-y-2'>
+          <h3 className="text-lg font-semibold mb-2">
+            {product.name}
+          </h3>
+          <div>
+            {product.short_description}
+          </div>
+        </div>}
+        ctaLink={`/produktas/${product.slug}?test_result=${results.code}`}
         className='mb-8' /></div>)}
     </div>
   )
