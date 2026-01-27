@@ -117,23 +117,6 @@ function TestResultCompare({ results, product }: TestResultCompareProps) {
 
       {/* Overall Domain Comparison */}
       <div>
-        {product && (
-        <div className='mb-8'>
-       <ConsultationCTA
-        emoji="💜"
-        theme="purple"
-        ctaLabel={`Įsigyti psichologo analizę už ${product.price} €`}
-        text={<div className='space-y-2'>
-          <h3 className="text-lg font-semibold mb-2">
-            {product.name}
-          </h3>
-          <div>
-            {product.short_description}
-          </div>
-        </div>}
-        ctaLink={`/krepselis/?add-to-cart=${product.id}&test_result=${results.map(r => r.code).join(',')}`}
-        className='mb-8' /></div>)}
-
         {/* <h2 className="text-2xl font-semibold text-gray-900 mb-4">Bendras palyginimas</h2> */}
         <CompareBarChart 
           max={120} 
@@ -163,7 +146,23 @@ function TestResultCompare({ results, product }: TestResultCompareProps) {
         })}
       </div>
 
-      <ConsultationCTA className='mt-8' />
+       {product && (
+        <div className='mb-8'>
+       <ConsultationCTA
+        emoji="🧠"
+        theme="brand-green"
+        ctaTheme='button'
+        ctaLabel={`Įsigyti psichologo analizę už ${product.price} €`}
+        text={<div className='space-y-2'>
+          <h3 className="text-lg font-semibold mb-2">
+            {product.name}
+          </h3>
+          <div>
+            {product.short_description}
+          </div>
+        </div>}
+        ctaLink={`/produktas/${product.slug}?test_result=${results.map(r => r.code).join(",")}`}
+        className='mb-8' /></div>)}
     </div>
   );
 }
