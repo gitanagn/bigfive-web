@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { getQuestions } from './lib/questions'
-import { Survey } from './components/Survey'
-import { UserForm } from './components/UserForm'
+import { getQuestions } from '../lib/questions'
+import { Survey } from './Survey'
+import { UserForm } from './UserForm'
 
 function B5Test() {
   const questions = getQuestions()

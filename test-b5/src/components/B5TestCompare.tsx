@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Button } from './components/Button'
-import { CodeList } from './components/CodeList'
+import { Button } from './Button'
+import { CodeList } from './CodeList'
 import { useParams } from "react-router";
 
 const MAX_CODES = 10
