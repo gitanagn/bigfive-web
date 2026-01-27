@@ -128,7 +128,7 @@ class PsyTests {
         register_post_type( 'testas', $args );
     }
 
-    private function registerAcfFields() {
+    public function registerAcfFields() {
         if ( ! function_exists( 'acf_add_local_field_group' ) ) {
             return;
         }
@@ -262,7 +262,7 @@ class PsyTests {
 
             $test_class = $test_class['class'];
 
-            $test_class::registerTestResultAssets($result->test_id, true);
+            $test_class::registerTestAssets($result->test_id, true);
         }
 
         // Only load assets on test pages
