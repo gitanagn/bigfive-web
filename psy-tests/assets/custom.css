@@ -1,0 +1,24 @@
+.wp-block-woocommerce-mini-cart-shopping-button-block {
+  display: none !important;
+}
+
+.wc-block-cart-item__remove-link {
+  color: red !important;
+  text-decoration: none !important;;
+}
+
+.wc-block-components-quantity-selector {
+  display: none;
+}
+
+.wp-block-woocommerce-mini-cart-title-items-counter-block {
+  display: none;
+}
+
+/* .wp-block-woocommerce-add-to-cart-form {
+  display: none;
+} */
+
+.wp-block-add-to-cart-form .quantity {
+  display: none !important;
+}
